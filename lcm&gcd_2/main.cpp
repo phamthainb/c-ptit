@@ -1,3 +1,4 @@
+// bai 2
 #include<iostream>
 #include<fstream>
 
@@ -6,23 +7,28 @@ using namespace std;
 ifstream iff("inp.txt", ios::in);
 ofstream off("out.txt", ios::out);
 
-long long fun_gcd(long long a, long long b){
+long long  _gcd(long long a, long long b){
 	while(a != b){
 		if(a > b) a = a - b;
 		else b = b - a;
 	}
 	return a;
 }
-
+long long _lcm(int n){
+	long long temp = 1;
+	for(int i = 1; i < n; i++){
+		temp = (i*(temp))/_gcd(i, temp);
+	}
+	return temp;
+}
 int main(){
 	int times;
 	iff>>times;
 	while(times--){
-		long long a,b,lgm,gcd;
-		iff>>a>>b;
-		gcd = fun_gcd(a,b);
-		lgm = (a*b)/gcd;
-		off<<lgm<<" "<<gcd<<endl;
+		int n;
+		iff>>n;
+		long long LCM;
+		LCM = _lcm(n);
+		off<<LCM<<endl;
 	}
-	return 0;
 }
