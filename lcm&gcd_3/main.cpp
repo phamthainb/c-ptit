@@ -27,7 +27,7 @@ int main(){
 		for(int i = 1; i <= gx; i++){
 			result = result*hx % modulo;
 		}
-		off<<result<<endl;
+		off<<result<<endl;	
 	}
 }         
 
