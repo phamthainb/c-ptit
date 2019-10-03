@@ -20,6 +20,7 @@ int main(){
 	while(times--){
 		long long a,b,lgm,gcd;
 		iff>>a>>b;
+//		cout<<a<<" "<<b<<endl;
 		gcd = fun_gcd(a,b);
 		lgm = (a*b)/gcd;
 		off<<lgm<<" "<<gcd<<endl;
