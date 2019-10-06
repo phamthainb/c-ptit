@@ -6,7 +6,7 @@
 using namespace std;
 
 ifstream iff("inp.txt", ios::in);
-//ofstream off("out.txt", ios::out);
+ofstream off("out.txt", ios::out);
 
 //bool prime(long long n){
 //	if(n == 2) return true;
@@ -24,12 +24,12 @@ int main(){
 		
 		for(int i = 2; i <= sqrt(n); i++){
 			while(n%i == 0){
-				cout<<i<<" ";
+				off<<i<<" ";
 				n/=i;
 			}
 		}
-		if(n > 1) cout<<n;		
-		cout<<endl;
+		if(n > 1) off<<n;		
+		off<<endl;
 	}
 	return 0;
 }
