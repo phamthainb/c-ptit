@@ -1,4 +1,4 @@
-// bai 20 prime_13
+// bai 21 prime_14
 #include<bits/stdc++.h>
 
 using namespace std;
