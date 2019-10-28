@@ -1,4 +1,4 @@
-// bai 28 modulo_3
+// bai 29 modulo_4
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -10,13 +10,13 @@ int main(){
 	int times;
 	iff>>times;
 	while(times--){
-		long long n, k, result = 0;
+		int n, k, result = 0;
 		iff>>n>>k;
-		if(k > n) off<<(1 + n)*n/2<<endl;
-		else {
-			for(int i = 1; i <= n; i++) result += i % k;
-			off<<result<<endl;
+		for(int i = 1; i <= n; i++){
+			result += i%k;
 		}
+		if(result == k) off<<1<<endl;
+		else off<<0<<endl;
 	}
 	return 0;
 }

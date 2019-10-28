@@ -5,11 +5,24 @@ using namespace std;
 
 class Dathuc{
 	private :
-		int bac, heso[100];
+		int bac;
+		float *heso;
 	public :
+		
+		Dathuc(int, float);
+		
+		~Dathuc(float);
+		
 		void nhap();
 		void hienthi();
 };
+Dathuc::Dathuc(int constBac, float constHeso){
+	constBac = 0;
+	constHeso = 0;
+}
+Dathuc::~Dathuc(float &constHeso){
+	delete(constHeso);
+}
 void Dathuc::nhap(){
 	cin>>bac;
 	for(int i = 0; i < bac; i++) cin>> heso[i];
