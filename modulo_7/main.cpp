@@ -1,5 +1,6 @@
-// bai 31 modulo_6
+// bai 32 modulo_7
 #include<bits/stdc++.h>
+
 
 using namespace std;
 
@@ -10,9 +11,7 @@ int main(){
 	int times;
 	iff>>times;
 	while(times--){
-		string a;
-		long long b, m;
-		iff>>a>>b>>m;
+	int n, a[100001]={ 0 };
 		
 	}
 	return 0;

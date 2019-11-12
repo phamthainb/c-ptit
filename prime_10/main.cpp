@@ -3,8 +3,8 @@
 
 using namespace std;
 
-ifstream iff("inp.txt", ios::in);
-ofstream off("out.txt", ios::out);
+//ifstream iff("inp.txt", ios::in);
+//ofstream off("out.txt", ios::out);
 
 int sum (int n){
 	int s = 0;
@@ -17,10 +17,10 @@ int sum (int n){
 
 int main(){
 	int times;
-	iff>>times;
+	cin>>times;
 	while(times--){
 		int n, sum_n = 0, sum_prime = 0;
-		iff>>n;
+		cin>>n;
 		sum_n = sum(n);
 		vector<int> prime;
 		for(int i = 2; i <= sqrt(n); i++){
@@ -33,8 +33,8 @@ int main(){
 		}
 		if(n > 1) prime.push_back(n);
 		for(vector<int>::iterator i = prime.begin(); i < prime.end(); i++) sum_prime += sum(*i);
-		if(sum_n == sum_prime) off<<"Yes"<<endl;
-		else off<<"No"<<endl;
+		if(sum_n == sum_prime) cout<<"Yes"<<endl;
+		else cout<<"No"<<endl;
 	}
 	return 0;
 }
