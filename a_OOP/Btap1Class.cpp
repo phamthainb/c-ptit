@@ -1,4 +1,3 @@
-﻿// Btap1Class.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -33,7 +32,7 @@ void Nguoi::xuat() {
 class KhachHang :protected Nguoi {
 protected:
 	int maKH;
-	int loaiPhong[3]; //1. Đơn, 2. Đôi, 3. VIP
+	int loaiPhong[3]; 
 	string mota;
 	static int count;
 public:
@@ -43,7 +42,9 @@ public:
 	void hienthi();
 	void ghitep();
 };
+
 int KhachHang::count = 1000;
+
 void KhachHang::nhap() {
 	Nguoi::nhap();
 	maKH = count; count++;
@@ -77,7 +78,9 @@ public:
 	void hienthi();
 	void ghitep();
 };
+
 int Phong::count = 100;
+
 void Phong::nhap() {
 	maPhong = count;	count++;
 	cin >> kieuPhong;
