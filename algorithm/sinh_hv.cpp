@@ -23,16 +23,7 @@ int main(){
 
 void init(){
 	cin>>n;
-//	for(int i = 1; i <=n; i++) a[i] = i;
-	a[1]=5;
-	a[2]=6;
-	a[3]=8;
-	a[4]=3;
-	a[5]=9;
-	a[6]=7;
-	a[7]=4;
-	a[8]=2;
-	a[9]=1;
+	for(int i = 1; i <=n; i++) a[i] = i;
 }
 
 bool checkLast(){
