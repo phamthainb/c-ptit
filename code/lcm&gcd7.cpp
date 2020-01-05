@@ -10,7 +10,6 @@ int main(){
 		 lcm = x*y/__gcd(x, y);
 		 lcm = lcm*z/__gcd(lcm, z);
 		min = pow(10, n - 1); max = pow(10, n) - 1;
-//		cout<<"@@@"<<gcd<<" "<<lcm<<" "<<min<<" "<<max<<" "<<min/lcm<<endl;
 		if(lcm <= min){
 			if(min%lcm == 0) cout<<min<<endl;
 			else cout<<lcm * ((min/lcm) + 1)<<endl;
