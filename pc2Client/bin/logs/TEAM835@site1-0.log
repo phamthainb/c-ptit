@@ -1,0 +1,11 @@
+200401 024658.171|CONFIG|Thread-2|setFileHandlers|Now logging to /home/phamthainb/Desktop/ptit/c-ptit/pc2Client/bin/logs directory.
+200401 024658.171|INFO|Thread-2|info|
+200401 024658.172|INFO|Thread-2|info|Version 9.6.0 20190102 (Wednesday, January 2nd 2019 01:20 UTC) Java ver 11.0.6 build 5102 Linux 5.3.0-40-generic (amd64) 
+200401 024658.172|INFO|Thread-2|info|Login: team835 (aka team835)
+200401 024658.172|INFO|Thread-2|startLog|Working directory is /home/phamthainb/Desktop/ptit/c-ptit/pc2Client/bin
+200401 024658.173|INFO|Thread-2|startLog|Process id is 6844@heyy
+200401 024658.173|INFO|Thread-2|info|Attempting to load UI class edu.csus.ecs.pc2.ui.team.TeamView
+200401 024658.252|INFO|Thread-2|info|Loaded UI class edu.csus.ecs.pc2.ui.team.TeamView
+200401 024658.738|INFO|Thread-2|info| handlePacket original LOGIN_SUCCESS after -- all settings loaded 
+200401 024658.740|INFO|Thread-2|info|handlePacket end Packet[LOGIN_SUCCESS] #36294 SERVER0 @ site 1 -> TEAM835 @ site 1
+200401 024658.740|INFO|Thread-2|info| receiveObject(S) end   got Packet[LOGIN_SUCCESS] #36294 SERVER0 @ site 1 -> TEAM835 @ site 1
