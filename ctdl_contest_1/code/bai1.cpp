@@ -1,20 +1,23 @@
+// 
 #include<bits/stdc++.h>
 using namespace std;
 
 int main(){
-	int times;
-	cin>>times;
+	int times; cin>>times;
 	while(times--){
-		char str[1001];
-		// cout<<"input here"<<endl;
+		string str;
+		int a[1001];
 		cin>>str;
-		// cout<<str<<endl;
-		for (int i = 0; i < strlen(str); ++i)
-		{
-			cout<<str[i]<<" ";
+		for(int i = 0; i < str.size(); i++) a[i] = (int)(str[i] - '0');//convert string to array
+		for(int i = str.size() - 1; i >= 0; i--) {
+			if(a[i] == 1) a[i] = 0;
+			else{
+				a[i] = 1;
+				break;
+			}
 		}
-		// cin.
+		for(int i = 0; i < str.size(); i++) cout<<a[i];
+		cout<<endl;
 	}
-	
 	return 0;
 }
