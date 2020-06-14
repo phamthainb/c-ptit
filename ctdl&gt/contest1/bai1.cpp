@@ -1,4 +1,9 @@
-//
+/**
+@name  : xau nhi phan ke tiep
+@solve : tim so 0 dau tien tu phai qua trai, swig all so 1 == 0 sau so 0 tim duoc
+@by    : phamthainb
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
