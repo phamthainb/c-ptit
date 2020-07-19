@@ -1,8 +1,8 @@
-c++
-pc2
 # Ignore all
 *
 # Unignore all with extensions
 !*.*
 # Unignore all dirs
 !*/
+c++
+pc2
