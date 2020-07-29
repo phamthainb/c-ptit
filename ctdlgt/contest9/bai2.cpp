@@ -38,7 +38,7 @@ void Solo()
     sort(storeNext[i].begin(), storeNext[i].end());
     for (int j = 0; j < storeNext[i].size(); j++)
       if (storeNext[i][j] > i)
-        cout << i << " " << storeNext[i][j]<< endl;
+        cout << i << " " << storeNext[i][j] << endl;
   }
 }
 
