@@ -1,7 +1,25 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-#define modulo 1e9 + 7;
+#define modulo 1000000007;
+
+long long expow(int n, int k)
+{
+  if (k == 0)
+    return 1;
+  if (k == 1)
+    return n;
+  long long temp = expow(n, k / 2);
+  if (k % 2 == 0)
+  {
+    return temp * temp % modulo;
+  }
+  else
+  {
+    long long fuckman = temp * temp % modulo;
+    return fuckman * n % modulo;
+  }
+}
 
 int main()
 {
@@ -9,13 +27,9 @@ int main()
   cin >> times;
   while (times--)
   {
-    int n, k, temp = 1;
+    int n, k;
     cin >> n >> k;
-    while (k--)
-    {
-      temp = (int)(temp * n) % modulo;
-    }
-    cout << temp << endl;
+    cout << expow(n, k) << endl;
   }
   return 0;
 }
