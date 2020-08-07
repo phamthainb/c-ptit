@@ -3,28 +3,25 @@ using namespace std;
 //init
 string s;
 
-bool _solo()
+int _solo()
 {
-    stack<char> listChar;
+    int rs = 0;
+    stack<int> mark;
+    mark.push(-1); //init base
     for (int i = 0; i < s.size(); i++)
     {
-        if (s[i] == '{' || s[i] == '(' || s[i] == '[')
-            listChar.push(s[i]);
+        if (s[i] == '(')
+            mark.push(i);
         else
         {
-            if (listChar.empty())
-                return false;
-            char tag = listChar.top();
-            if (s[i] == '}' && tag != '{')
-                return false;
-            else if (s[i] == ']' && tag != '[')
-                return false;
-            else if (s[i] == ')' && tag != '(')
-                return false;
-            listChar.pop();
+            mark.pop();
+            if (mark.empty())
+                mark.push(i);
+            else
+                rs = max(rs, i - mark.top());
         }
     }
-    return true;
+    return rs;
 }
 
 int main()
@@ -34,7 +31,7 @@ int main()
     while (times--)
     {
         cin >> s;
-        _solo() ? cout << "YES" << endl : cout << "NO" << endl;
+        cout << _solo() << endl;
     }
     return 0;
 }
