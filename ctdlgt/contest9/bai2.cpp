@@ -1,50 +1,37 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
-int vertices, temp = 0;
-string listNext;
-vector<vector<int>> storeNext(100);
-
-void splitInput(string listNext, int index)
-{
-  for (int i = 0; i <= listNext.size(); i++)
-  {
-    if (listNext[i] == ' ' || i == listNext.size())
-    {
-      storeNext[index].push_back(temp);
-      temp = 0;
-    }
-    else
-      temp = temp * 10 + (listNext[i] - '0');
-  }
-}
-
-void Input()
-{
-  cin >> vertices;
-  cin.ignore();
-  for (int i = 1; i <= vertices; i++)
-  {
-    getline(cin, listNext);
-    splitInput(listNext, i);
-  }
-}
-
-void Solo()
-{
-  for (int i = 1; i <= vertices; i++)
-  {
-    sort(storeNext[i].begin(), storeNext[i].end());
-    for (int j = 0; j < storeNext[i].size(); j++)
-      if (storeNext[i][j] > i)
-        cout << i << " " << storeNext[i][j] << endl;
-  }
-}
 
 int main()
 {
-  Input();
-  Solo();
-  return 0;
+  int n;
+  vector<int> rs[55];
+  cin >> n;
+  for (int i = 1; i <= n; i++)
+  {
+    string s;
+    getline(cin, s);
+    int tmp = 0, j = 0;
+    s += " ";
+    while (j < s.size())
+    {
+      if (s[j] >= '0' && s[j] <= '9')
+        tmp = tmp * 10 + (int)(s[j] - '0');
+      else if (tmp > 0)
+      {
+        rs[i].push_back(tmp);
+        tmp = 0;
+      }
+      j++;
+    }
+  }
+  //print
+  for (int i = 1; i <= n; i++)
+  {
+    sort(rs[i].begin(), rs[i].end());
+    for (int j = 0; j < rs[i].size(); j++)
+    {
+      if (rs[i][j] > i)
+        cout << i << " " << rs[i][j] << endl;
+    }
+  }
 }
